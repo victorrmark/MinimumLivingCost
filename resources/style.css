@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+  }
+
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+
+  /*styling for the head section*/
+  header{
+    width: 100%;
+    background-image: url("images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 0 200px;
+  }
+
+  nav{
+    margin: 0px auto 50px auto;
+    max-width: 85%;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 7px;
+  }
+
+  nav img{
+    width: 100px;
+    height: 30px;
+    margin-right: 20%;
+  }
+
+  li{
+    display: inline;
+    padding-right: 10px;
+  }
+
+  li a{
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  li a:hover{
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+  }
+
+  .banner-text{
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    column-gap: 15%;
+    padding-right: 10px;
+  }
+
+  h1{
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    width: 47%;
+    line-height: 1.2;
+  }
+
+  .banner-half{
+    /*width: 35%;*/
+    width: 430px;
+  }
+
+  .map{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    background-image: url("images/Rectangle\ 1.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
+  }
+
+  .head-form{
+    display: flex;
+    background: white;
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+
+  .head-form select{
+    padding: 15px 0;
+    border: 1px #E6E6E6 solid;
+    width: 45%;
+    background: #F5F5F5;
+    font-size: .875rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #area{
+    border-radius: 10px 0 0 10px;
+  }
+
+  select[name="area"]{
+    border-radius: 0px;
+  }
+
+  .head-form a{
+    border-radius: 0 10px 10px 0;
+    width: 15%;
+    background: dodgerblue;
+    border: 1px #E6E6E6 solid;
+    padding: 10px 20px;
+  }
+  .fa-search{
+    color: white;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 768px){
+    header ul{
+      display: none;
+    }
+
+    .banner-text{
+      flex-wrap: wrap;
+      gap: 45px;
+      padding-top: 50px;
+    }
+
+    h1{
+      width: 100%;
+    }
+  }
+
+  /*styling for the first section part*/
+  main{
+    max-width: 100%;
+  }
+
+  .first-sctn{
+    width: 85%;
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+
+  h2, .underline{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    flex: 1;
+  }
+
+  .underline{
+    border-bottom: 2px solid orangered;
+  }
+
+  .main-cntnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .main-img{
+    width: 320px;
+    height: 400px;
+    object-fit: contain;
+    background-image: url('images/first\ image.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px 0;
+    box-shadow:15px 10px 15px rgba(0, 0, 0, 0.2);
+    margin-right: 50px;
+  }
+
+  .main-sctn{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    align-content: center;
+    column-gap: 50px;
+    row-gap: 70px;
+  }
+
+  .main-sctn div{
+    margin-right: 5%;
+  }
+
+  .icon{
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .icon + p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  @media only screen and (max-width: 768px){
+    .main-cntnt{
+      margin-top: 35px;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+    }
+
+    .main-sctn{
+      width: 100%;
+      justify-content: space-between;
+      row-gap: 45px;
+    }
+
+    .icon + p{
+      font-size: 1rem;
+    }
+
+    h2, .underline{
+      font-size: 1.875rem;
+    }
+  }
+
+  /*styling for the properties section*/
+  .second-sctn{
+    background-color: #F5F5F5;
+    max-width: 100%;
+    padding: 70px 0;
+  }
+
+  .second-sctn-head{
+    width: 85%;
+    display: flex;
+    align-content: center;
+    margin: 0px auto;
+  }
+
+  button{
+    background-color: orangered;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: rgb(235, 66, 4);
+  }
+
+  .card-container{
+    max-width: 85%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 25px;
+  }
+
+  .card{
+    background-color: #fff;
+    border-radius: 20px;
+    /*width: 350px;*/
+    width: 30%;
+    /*height: 480px;*/
+    border: 1px solid #979797;
+    position: relative;
+  }
+
+  .card:hover{
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-img{
+    max-width: 100%;
+    height: 270px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .prop-1{
+    background-image: url("images/property-image-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .prop-2{
+    background-image: url("images/property-image-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .prop-3{
+    background-image: url("images/property-image-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .prop-4{
+    background-image: url("images/property-image-4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .prop-5{
+    background-image: url("images/property-image-5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .prop-6{
+    background-image: url("images/property-image-6.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-txt{
+    padding: 20px 20px 0;
+    line-height: 1.3;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+
+  .des{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #818181;
+    margin-top: 20px;
+  }
+
+  .price{
+    color: #F4511E;
+    font-size: 1.4375rem;
+  }
+
+  .card-btn{
+    border-top: 1px solid #E4E4E4;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .card-btn div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    flex: 1;
+    font-weight: bold;
+  }
+
+  .card-btn div:nth-child(2){
+    border-left: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .first{
+    border-radius: 10px 0 0 10px;
+    color: #BDBDBD;
+    background: #F3F3F3;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #BDBDBD;
+    padding: 10px 15px;
+  }
+
+  .outlined-button{
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+    border-right: 1px solid #E9E9E9;
+    color: orangered;
+    background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 0;
+  }
+
+  .outlined-button:hover{
+    background-color: orangered;
+    color: white;
+  }
+
+  .last{
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid #BDBDBD;
+  }
+
+  @media only screen and (max-width: 900px){
+    /*this is to reduce the cards to 2 cards per column
+    at this breakpoint*/
+    .card{
+      width: 45%;
+      column-gap: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    /*this is to reduce the cards to 1 card per column
+    at this breakpoint*/
+    .card{
+      width: 85%;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    button{
+      font-size: .875rem;
+      padding: 15px 15px;
+    }
+
+  }
+
+
+  /*style for the third section*/
+  .third-sec{
+    padding: 70px 0;
+    max-width: 100%;
+  }
+
+  .third-sec-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 10px;
+    width: 85%;
+    align-items: center;
+  }
+
+  .img-sctn{
+    position: relative;
+    width: 60%;
+    gap: 10px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .img-1, .img-2, .img-3, .img-4{
+    border-radius: 10px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+    /*position: absolute;*/
+    border-radius: 20px;
+    color: #ffffff;
+  }
+
+  .img-1{
+    /*width: 245px;*/
+    width: 40%;
+    height: 330px;
+    background-image: url("images/flexible.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-2{
+    /*width: 260px;*/
+    width: 50%;
+    height: 270px;
+    /*left: 260px;*/
+    margin-top: 60px;
+    background-image: url("images/Image\ 2.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .img-3{
+    /*width: 212px;*/
+    width: 35%;
+    height: 285px;
+    top: 350px;
+    background-image: url("images/house-cleaning.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-4{
+    /*width: 325px;*/
+    width: 60%;
+    height: 356px;
+    top: 350px;
+    left: 232px;
+    background-image: url("images/find-roommate.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .third-sec-text{
+    position: relative;
+    /*width: 385px;*/
+    width: 35%;
+    line-height: 1.5;
+  }
+
+  .third-sec-text > p{
+    margin: 20px 0;
+  }
+
+  @media only screen and (max-width: 900px){
+    /*this is the breakpoint i choose for this section.
+    the text moves to the next line so the images have enough space and doesn't loose proportion*/
+    .img-sctn{
+      width: 100%;
+    }
+
+    .third-sec-text{
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+
+  /*styles for the form section*/
+  h5{
+    font-size: 1.125rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .form-container{
+    width: 85%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin: 20px auto;
+    padding: 35px 70px;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h4{
+    font-family: 'Inter', Sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    color: orangered;
+    margin-bottom: 35px;
+  }
+
+  .form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  label{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  input, .form-group select, textarea{
+    background-color: #F9F9F9;
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+  }
+  /* ".form-group select" was used so it doesn't affect other select type*/
+
+  .textarea, .upload{
+    width: 100%;
+  }
+
+  .upload-card{
+    outline: 1px dashed orangered;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .submit{
+    width: 35%;
+    margin: 20px auto;
+  }
+
+  @media only screen and (max-width: 768px){
+    .form-container{
+      width: 90%;
+      padding: 35px 35px;
+    }
+
+    .form-group{
+      width: 45%;
+    }
+
+    .textarea, .upload{
+      width: 100%;
+    }
+
+    .submit{
+      width: 50%;
+    }
+  }
+
+  /*styling for the testimonial section*/
+  .testimonial{
+    width: 100%;
+    background-color:rgba(235, 66, 4, 0.1);
+    margin: 100px 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px 20px;
+  }
+
+  .video-container{
+    background-image: url("images/cover.jpg");
+    width: 45%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .property-owner{
+    position: relative;
+    width: 45%;
+    line-height: 1.6;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bio{
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .quote{
+    position: absolute;
+    left: -50px;
+    top: -40px;
+    opacity: 0.5;
+  }
+  .bio div:first-child{
+    background-image: url("images/harrison.png");
+    background-position: center;
+    border: 2px solid orangered;
+    border-radius: 50px;
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .bio div p:first-child{
+    font-weight: bold;
+    color: orangered;
+  }
+
+  @media only screen and (max-width: 768px){
+    .testimonial{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-container{
+      width: 100%;
+    }
+
+    .property-owner{
+      width: 85%;
+      margin-top: 70px;
+    }
+
+  }
+
+
+/*styles fot the footer*/
+  footer{
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  footer h2{
+    font-size: 3rem;
+  }
+
+  .first-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border-top: 2px solid orangered;
+    margin: 20px auto;
+    padding: 50px 150px;
+  }
+
+  footer .fa{
+    color: orangered;
+    font-size: 1rem;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address, .contact, .phone, .fax, .socials{
+    display: flex;
+    align-items: center;
+  }
+
+  .address, .phone, .fax{
+    margin-bottom: 13px;
+    gap: 10px;
+  }
+
+  .contact{
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .socials{
+    justify-content: space-between;
+  }
+
+  .second-footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    font-size: .875rem;
+    border-top: 1px solid rgba(123, 185, 252, 0.2);
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+
+  .footer-nav{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px 20px;
+     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 768px){
+    .first-footer{
+      padding: 50px 0;
+      flex-direction: column;
+      gap: 45px;
+    }
+  }
+
+
+
+  
+
