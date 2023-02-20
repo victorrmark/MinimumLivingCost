@@ -46,7 +46,7 @@
 
   li a{
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 10px;
   }
 
@@ -121,7 +121,9 @@
     width: 15%;
     background: dodgerblue;
     border: 1px #E6E6E6 solid;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .fa-search{
     color: white;
@@ -135,12 +137,21 @@
 
     .banner-text{
       flex-wrap: wrap;
-      gap: 45px;
-      padding-top: 50px;
+      justify-content: center;
+      gap: 35px;
+      outline: 1px solid red;
+      width: 95%;
     }
 
     h1{
+      font-size: 2.5rem;
       width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 620px){
+    header{
+      padding: 10px 0 100px;
     }
   }
 
@@ -170,6 +181,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     max-width: 100%;
     margin-top: 20px;
   }
@@ -224,10 +236,11 @@
       margin-top: 35px;
       flex-wrap: wrap;
       gap: 50px;
-      justify-content: center;
+      outline: 1px solid red;
     }
 
     .main-sctn{
+      outline: 1px solid red;
       width: 100%;
       justify-content: space-between;
       row-gap: 45px;
@@ -239,6 +252,16 @@
 
     h2, .underline{
       font-size: 1.875rem;
+    }
+  }
+
+  @media only screen and (max-width: 620px){
+    h2, .underline{
+      font-size: 1.5625rem;
+    }
+
+    .icon + p{
+      font-size: .875rem;
     }
   }
 
@@ -360,7 +383,8 @@
 
   .price{
     color: #F4511E;
-    font-size: 1.4375rem;
+    /*font-size: 1.4375rem;*/
+    font-size: 1.25rem;
   }
 
   .card-btn{
@@ -443,7 +467,6 @@
       font-size: .875rem;
       padding: 15px 15px;
     }
-
   }
 
 
@@ -609,6 +632,7 @@
     height: 80px;
     border-radius: 10px;
     display: flex;
+    font-size: .875rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -635,9 +659,10 @@
     }
 
     .submit{
-      width: 50%;
+      width: 70%;
     }
   }
+
 
   /*styling for the testimonial section*/
   .testimonial{
@@ -786,7 +811,8 @@
     }
   }
 
-
-
-  
-
+  @media only screen and (max-width: 620px){
+    .contact-info p{
+     font-size: .875rem;
+    }
+  }
