@@ -228,7 +228,6 @@
   @media only screen and (max-width: 900px){
     .main-sctn{
       justify-content: space-between;
-      outline: 1px solid red;
     }
   }
 
@@ -485,7 +484,6 @@
     display: flex;
     font-size: 1.25rem;
     flex-wrap: wrap;
-    outline: 1px solid red;
   }
 
   .img-1, .img-2, .img-3, .img-4{
